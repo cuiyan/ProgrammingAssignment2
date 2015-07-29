@@ -26,11 +26,11 @@ cacheSolve <- function(x, ...) {
   m <- x$getInverse()
   if(!is.null(m)) {
     message("getting cached data")
-    return(m)
+    # return(m)
   }
   data <- x$get()
   #计算矩阵的逆矩阵
-  m <- solve(x)
+  m <- solve(data)
   #存入缓存
   x$setInverse(m)
   return (m)
